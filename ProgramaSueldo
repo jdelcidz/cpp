@@ -1,0 +1,31 @@
+// Programa de sueldo - Calcula sueldo total, comisiones 10% de las ventas, tambien rebajando la tasa de jubilacion
+
+#include <iostream>
+
+using namespace std; 
+
+int main(int argc, char** argv){
+	// Datos de entrada
+	double sueldot = 0, sbase = 0, fjubilacion = 0.025, comisiones= 0.10, calculocomision = 0, ventas = 0, totalapagar = 0;
+	
+	// Solicitando ingreso de datos
+	cout <<"\n Ingrese el sueldo Base: ";
+	cin >> sbase;
+	
+	cout <<"\n Ingrese el total de ventas: ";
+	cin>>ventas;
+	
+	//Procesando ---Realizando los calculos
+	
+	calculocomision = ventas * comisiones;
+	sueldot = sbase + calculocomision;
+	totalapagar = sueldot   - (sueldot * fjubilacion);
+
+	//Salida de datos 
+	
+	cout << endl;
+	cout <<"\n El total de sus comisiones es: " << sueldot;
+	cout <<"\n El total a pagar es: " << totalapagar;
+	
+	return 0;
+}
